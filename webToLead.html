@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luxury Property Consultation | Premier Realty Group</title>
+    <meta
+      name="description"
+      content="Request a private consultation for premium real estate. Share your details and our team will contact you shortly."
+    />
+
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              soft: "0 10px 30px rgba(0,0,0,0.15)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
+    <!-- Bright background -->
+    <div class="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-32 left-1/2 h-[520px] w-[980px] -translate-x-1/2 rounded-full bg-gradient-to-r from-amber-200/55 via-sky-200/35 to-indigo-200/45 blur-3xl"></div>
+      <div class="absolute bottom-[-260px] right-[-260px] h-[620px] w-[620px] rounded-full bg-gradient-to-tr from-amber-200/35 via-fuchsia-200/30 to-sky-200/35 blur-3xl"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.9),rgba(248,250,252,0.85),rgba(248,250,252,1))]"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-10">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+        <div class="flex items-center gap-3">
+          <div class="grid h-10 w-10 place-items-center rounded-xl bg-white/80 ring-1 ring-slate-900/10 shadow-sm">
+            <span class="text-sm font-semibold tracking-wide text-slate-900">PR</span>
+          </div>
+          <div>
+            <div class="text-sm font-semibold leading-tight">Premier Realty Group</div>
+            <div class="text-xs text-slate-600">Private viewings • Off-market access</div>
+          </div>
+        </div>
+        <div class="hidden items-center gap-2 sm:flex">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs text-slate-700 ring-1 ring-slate-900/10">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+            Now booking private consultations
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="relative z-10">
+      <!-- Top image carousel -->
+      <section class="mx-auto max-w-6xl px-6 pt-2">
+        <div class="overflow-hidden rounded-3xl ring-1 ring-slate-900/10 shadow-soft bg-white">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/35 via-slate-900/10 to-transparent"></div>
+            <img
+              id="heroImg"
+              class="h-[260px] w-full object-cover sm:h-[320px] lg:h-[360px]"
+              src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=2400&q=80"
+              alt="Premium real estate"
+              loading="eager"
+              referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-x-0 bottom-0 p-5 sm:p-7">
+              <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1 text-xs text-slate-700 ring-1 ring-slate-900/10">
+                  New listings weekly • Guided tours • Investment advisory
+                </div>
+                <div class="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                  Curated homes. Exceptional locations. Seamless experience.
+                </div>
+                <div class="mt-1 text-sm text-white/85">
+                  Tell us what you’re looking for — we’ll shortlist options and schedule a private viewing.
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              id="prevHero"
+              class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/85 p-2 text-slate-800 ring-1 ring-slate-900/10 shadow-sm transition hover:bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500/25"
+              aria-label="Previous image"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button
+              type="button"
+              id="nextHero"
+              class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/85 p-2 text-slate-800 ring-1 ring-slate-900/10 shadow-sm transition hover:bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500/25"
+              aria-label="Next image"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+
+            <div class="absolute right-4 top-4 flex items-center gap-2 rounded-full bg-white/85 px-3 py-1 text-xs text-slate-700 ring-1 ring-slate-900/10">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+              Available today
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto grid max-w-6xl items-center gap-10 px-6 pb-16 pt-6 lg:grid-cols-2 lg:gap-12 lg:pb-24 lg:pt-10">
+        <!-- Left: hero -->
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs text-slate-700 ring-1 ring-slate-900/10">
+            <span class="font-medium text-amber-700">Luxury</span>
+            <span class="text-slate-400">•</span>
+            <span>Buy • Sell • Invest</span>
+          </div>
+
+          <h1 class="mt-5 text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
+            Find your next address in
+            <span class="bg-gradient-to-r from-amber-700 via-amber-600 to-amber-700 bg-clip-text text-transparent">exceptional</span>
+            real estate.
+          </h1>
+
+          <p class="mt-5 max-w-xl text-base leading-relaxed text-slate-700">
+            Request a private consultation. Share your details and our team will reach out quickly with curated options that match your needs.
+          </p>
+
+          <div class="mt-7 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl bg-white/80 p-4 ring-1 ring-slate-900/10 shadow-sm">
+              <div class="text-sm font-semibold text-slate-900">White-glove service</div>
+              <div class="mt-1 text-sm text-slate-600">Dedicated advisor and curated listings.</div>
+            </div>
+            <div class="rounded-2xl bg-white/80 p-4 ring-1 ring-slate-900/10 shadow-sm">
+              <div class="text-sm font-semibold text-slate-900">Fast response</div>
+              <div class="mt-1 text-sm text-slate-600">We’ll contact you shortly after you submit.</div>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-600">
+            <div class="inline-flex items-center gap-2">
+              <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+              Securely submitted
+            </div>
+            <div class="inline-flex items-center gap-2">
+              <span class="h-2 w-2 rounded-full bg-sky-500"></span>
+              No account required
+            </div>
+            <div class="inline-flex items-center gap-2">
+              <span class="h-2 w-2 rounded-full bg-amber-500"></span>
+              Replies typically within 15 minutes
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form card -->
+        <div class="lg:justify-self-end">
+          <div class="rounded-3xl bg-white/90 p-6 ring-1 ring-slate-900/10 shadow-soft sm:p-8">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h2 class="text-lg font-semibold text-slate-900">Request a private consultation</h2>
+                <p class="mt-1 text-sm text-slate-600">
+                  Fill in your details and we’ll contact you shortly.
+                </p>
+              </div>
+              <div class="hidden rounded-2xl bg-slate-900/5 px-3 py-2 text-xs text-slate-700 ring-1 ring-slate-900/10 sm:block">
+                Concierge
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-slate-900/5 p-4 ring-1 ring-slate-900/10">
+              <div class="text-xs font-medium text-slate-800">Privacy</div>
+              <div class="mt-1 text-xs text-slate-600">
+                We only use your information to respond to your inquiry.
+              </div>
+            </div>
+
+            <!-- Inquiry form (field names preserved for backend capture) -->
+            <form
+              class="mt-6 space-y-4"
+              action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdN00000ShJQh"
+              method="POST"
+            >
+              <input type="hidden" name="oid" value="00DdN00000ShJQh" />
+              <input type="hidden" name="retURL" value="https://www.cloudcertitude.com/" />
+
+              <!-- Optional debug -->
+              <!-- <input type="hidden" name="debug" value="1" /> -->
+              <!-- <input type="hidden" name="debugEmail" value="s.khandelwal@cloudcertitude.com" /> -->
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="first_name" class="block text-sm font-medium text-slate-200">First name</label>
+                  <input
+                    id="first_name"
+                    name="first_name"
+                    maxlength="40"
+                    type="text"
+                    autocomplete="given-name"
+                    placeholder="e.g., Aisha"
+                    class="mt-1 w-full rounded-xl border border-slate-900/10 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-amber-500/40 focus:shadow-[0_0_0_4px_rgba(245,158,11,0.18)]"
+                  />
+                </div>
+
+                <div>
+                  <label for="last_name" class="block text-sm font-medium text-slate-800">Last name <span class="text-amber-700">*</span></label>
+                  <input
+                    id="last_name"
+                    name="last_name"
+                    maxlength="80"
+                    type="text"
+                    required
+                    autocomplete="family-name"
+                    placeholder="e.g., Khan"
+                    class="mt-1 w-full rounded-xl border border-slate-900/10 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-amber-500/40 focus:shadow-[0_0_0_4px_rgba(245,158,11,0.18)]"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-800">Email <span class="text-amber-700">*</span></label>
+                <input
+                  id="email"
+                  name="email"
+                  maxlength="80"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="name@company.com"
+                  class="mt-1 w-full rounded-xl border border-slate-900/10 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-amber-500/40 focus:shadow-[0_0_0_4px_rgba(245,158,11,0.18)]"
+                />
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-slate-800">Phone</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    maxlength="40"
+                    type="tel"
+                    autocomplete="tel"
+                    placeholder="+91 9XXXXXXXXX"
+                    class="mt-1 w-full rounded-xl border border-slate-900/10 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-amber-500/40 focus:shadow-[0_0_0_4px_rgba(245,158,11,0.18)]"
+                  />
+                </div>
+
+                <div>
+                  <label for="company" class="block text-sm font-medium text-slate-800">Company</label>
+                  <input
+                    id="company"
+                    name="company"
+                    maxlength="40"
+                    type="text"
+                    autocomplete="organization"
+                    placeholder="Optional"
+                    class="mt-1 w-full rounded-xl border border-slate-900/10 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-amber-500/40 focus:shadow-[0_0_0_4px_rgba(245,158,11,0.18)]"
+                  />
+                </div>
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="city" class="block text-sm font-medium text-slate-800">City</label>
+                  <input
+                    id="city"
+                    name="city"
+                    maxlength="40"
+                    type="text"
+                    autocomplete="address-level2"
+                    placeholder="e.g., Mumbai"
+                    class="mt-1 w-full rounded-xl border border-slate-900/10 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-amber-500/40 focus:shadow-[0_0_0_4px_rgba(245,158,11,0.18)]"
+                  />
+                </div>
+
+                <div>
+                  <label for="state" class="block text-sm font-medium text-slate-800">State / Province</label>
+                  <input
+                    id="state"
+                    name="state"
+                    maxlength="20"
+                    type="text"
+                    autocomplete="address-level1"
+                    placeholder="e.g., Maharashtra"
+                    class="mt-1 w-full rounded-xl border border-slate-900/10 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-amber-500/40 focus:shadow-[0_0_0_4px_rgba(245,158,11,0.18)]"
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                name="submit"
+                class="group mt-2 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 px-4 py-3 text-sm font-semibold text-white shadow-soft transition hover:brightness-110 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-500/25"
+              >
+                Get a call back
+                <span class="transition group-hover:translate-x-0.5" aria-hidden="true">→</span>
+              </button>
+
+              <p class="pt-1 text-center text-xs text-slate-600">
+                By submitting, you agree to be contacted about your inquiry.
+              </p>
+            </form>
+          </div>
+
+          <div class="mt-6 grid grid-cols-3 gap-3 text-center text-xs text-slate-600">
+            <div class="rounded-2xl bg-white/80 px-3 py-3 ring-1 ring-slate-900/10 shadow-sm">Trusted</div>
+            <div class="rounded-2xl bg-white/80 px-3 py-3 ring-1 ring-slate-900/10 shadow-sm">Confidential</div>
+            <div class="rounded-2xl bg-white/80 px-3 py-3 ring-1 ring-slate-900/10 shadow-sm">Responsive</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="border-t border-slate-900/10 py-8">
+        <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+          <div>© <span id="y"></span> Premier Realty Group. All rights reserved.</div>
+          <div class="flex gap-4">
+            <span class="text-slate-600">Private consultation request</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById("y").textContent = String(new Date().getFullYear());
+    </script>
+
+    <script>
+      const heroImages = [
+        "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=2400&q=80",
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=2400&q=80",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80",
+      ];
+
+      let heroIndex = 0;
+      const heroImgEl = document.getElementById("heroImg");
+      const prevBtn = document.getElementById("prevHero");
+      const nextBtn = document.getElementById("nextHero");
+
+      function setHero(i) {
+        heroIndex = (i + heroImages.length) % heroImages.length;
+        if (heroImgEl) heroImgEl.src = heroImages[heroIndex];
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", () => setHero(heroIndex - 1));
+      if (nextBtn) nextBtn.addEventListener("click", () => setHero(heroIndex + 1));
+      setInterval(() => setHero(heroIndex + 1), 6000);
+    </script>
+  </body>
+</html>
